@@ -9,4 +9,9 @@ block content
         div(class = "col-sm-2" id=index onclick=`buy(${index})`) 
           p #{result.type}
           p #{result.name}
-          p #{result.cost}   
+          p #{result.cost}
+
+  script.
+    function buy(element){
+      alert(`You purchased item ${element+1}.`)
+    }
