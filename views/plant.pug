@@ -2,3 +2,11 @@ extends layout
 
 block content
   h1= title
+  - var results = [{"type":"Palm", "name":"Caranday","cost":30},{"type":"Aquatic","name":"Water Hawthorn","cost":25},{"type":"Palm","name":"Chestnut","cost":15}]
+  div(class="container-fuild")
+    div(class="row")
+      each result,index in results
+        div(class = "col-sm-2" id=index onclick=`buy(${index})`) 
+          p #{result.type}
+          p #{result.name}
+          p #{result.cost}   
